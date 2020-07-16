@@ -42,7 +42,7 @@ public class DartEclairPlugin implements FlutterPlugin, MethodCallHandler {
   @Override
   public void onMethodCall(@NonNull MethodCall call, @NonNull Result result) {
     if (call.method.equals("getPlatformVersion")) {
-      result.success("Android " + Build.VERSION_CODES.BASE);
+      result.success("Android " + Build.VERSION.RELEASE);
     } else {
       result.notImplemented();
     }
